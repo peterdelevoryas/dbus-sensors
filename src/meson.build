@@ -116,3 +116,15 @@ endif
 if get_option('tests').allowed()
     subdir('tests')
 endif
+
+subproject('zbus-5.1.1-rs', required: true)
+zbus_dep = dependency('zbus-5.1.1-rs')
+
+executable(
+    'smbpbisensor',
+    'smbpbi.rs',
+    install: true,
+    dependencies: [
+        zbus_dep,
+    ],
+)

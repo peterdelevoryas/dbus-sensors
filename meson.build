@@ -1,7 +1,13 @@
 project(
     'dbus-sensors',
     'cpp',
-    default_options: ['warning_level=3', 'werror=true', 'cpp_std=c++23'],
+    'rust',
+    default_options: [
+        'warning_level=3',
+        'werror=true',
+        'cpp_std=c++23',
+        'rust_std=2021',
+    ],
     license: 'Apache-2.0',
     version: '0.1',
     meson_version: '>=1.1.1',

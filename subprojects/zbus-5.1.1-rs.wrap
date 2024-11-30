@@ -1,0 +1,9 @@
+[wrap-file]
+method = cargo
+directory = zbus-5.1.1
+source_url = https://crates.io/api/v1/crates/zbus/5.1.1/download
+source_filename = zbus-5.1.1.tar.gz
+source_hash = 1162094dc63b1629fcc44150bcceeaa80798cd28bcbe7fa987b65a034c258608
+
+[provide]
+dependency_names = zbus-5.1.1-rs
