@@ -1,0 +1,12 @@
+[package]
+name = "dbus-sensors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.41.1", features = ["full"] }
+zbus = "5.1.1"
+
+[[bin]]
+name = "hellosensor"
+path = "src/hello.rs"
