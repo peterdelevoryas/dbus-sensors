@@ -10,3 +10,7 @@ zbus = "5.1.1"
 [[bin]]
 name = "hellosensor"
 path = "src/hello.rs"
+
+[[test]]
+name = "test-hello"
+path = "src/tests/test-hello.rs"
