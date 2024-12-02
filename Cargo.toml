@@ -1,0 +1,21 @@
+[package]
+name = "dbus-sensors"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "smbpbisensor"
+path = "src/smbpbisensor.rs"
+
+[dependencies]
+anyhow = "1.0.94"
+camino = "1.1.9"
+clap = { version = "4.5.21", features = ["derive"] }
+i2cdev = { git = "https://github.com/peterdelevoryas/rust-i2cdev", rev = "7b7cac7440e72e5a5a0d018eed80e44c8d81290b" }
+
+[profile.release]
+strip = true
+lto = true
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
